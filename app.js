@@ -39,7 +39,7 @@ function mostrarFarmacias(listafiltrada) {
             <a href="${farmacia.mapa}" target="_blank" class="btn-mapa">Ver en Mapa</a>;
         `;
 
-        contenedor.appendchild(card);
+        contenedor.appendChild(card);
     });
 }
 
