@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaciaYa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Farmacias de Turno</h1>
+    </header>
+
+    <main>
+        <section class="buscardor">
+            <label for="zona">Selecciona tu zona:</label>
+            <select id="zona" onchange="filtrarFarmacis()">
+                <option value="todas">Todas las zona</option>
+                <option value="centro">centro</option>
+                <option value="norte">Zona Norte</option>
+                <option value="sur">Zona Sur</option>
+            </select>
+        </section>
+
+        <section id="lista-farmacias" class="lista">
+            
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
