@@ -7,27 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Farmacias de Turno</h1>
-    </header>
 
-    <main>
-        <section class="buscardor">
-            <label for="zona">Selecciona tu zona:</label>
-            <select id="zona" onchange="filtrarFarmacis()">
-                <option value="todas">Todas las zona</option>
-                <option value="centro">centro</option>
-                <option value="norte">Zona Norte</option>
-                <option value="sur">Zona Sur</option>
-            </select>
-        </section>
+    <!-- PANTALLA DE INICIO -->
+    <div id="pantalla-inicio" class="pantalla activa">
+        <header class="header-inicio">
+            <h1>FarmaciaYa</h1>
+            <p class="subtitulo">Encuentra tu farmacia de turno al instante</p>
+        </header>
 
-        <section id="lista-farmacias" class="lista">
-            
-        </section>
-    </main>
-    
+        <main class="contenedor-inicio">
+            <button class="btn-principal" onclick="mostrarSeccionBusqueda()">
+                🔍 Buscar farmacia de turno
+            </button>
+            <button class="btn-salir" onclick="salirApp()">
+                🚪 Salir de la app
+            </button>
+        </main>
+    </div>
+
+    <!-- PANTALLA DE BUSQUEDA Y RESULTADOS -->
+    <div id="pantalla-busqueda" class="pantalla">
+        <header>
+            <h1>FarmaciaYa</h1>
+            <h2>Farmacias de Turno</h2>
+        </header>
+
+        <main>
+            <!-- Filtro de zona -->
+            <section class="buscador">
+                <label for="zona">Filtrar por zona:</label>
+                <select id="zona" onchange="filtrarFarmacias()">
+                    <option value="todas">Todas las zonas</option>
+                    <option value="centro">Centro</option>
+                    <option value="norte">Zona Norte</option>
+                    <option value="sur">Zona Sur</option>
+                </select>
+            </section>
+
+            <!-- Lista de farmacias -->
+            <section id="lista-farmacias" class="lista">
+                <!-- Se genera dinámicamente con JS -->
+            </section>
+
+            <!-- Botón de navegación -->
+            <div class="contenedor-acciones">
+                <button class="btn-volver" onclick="mostrarPantallaInicio()">
+                    ⬅ Volver al Inicio
+                </button>
+            </div>
+        </main>
+    </div>
+
     <script src="app.js"></script>
-
 </body>
 </html>
